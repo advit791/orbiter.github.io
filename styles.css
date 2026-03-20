@@ -1,5 +1,7 @@
 
-/* General Page Styling */
+/* ===========================
+   GLOBAL PAGE STYLING
+   =========================== */
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -7,7 +9,9 @@ body {
     color: white;
 }
 
-/* Navigation Bar */
+/* ===========================
+   NAVIGATION BAR
+   =========================== */
 nav {
     background: #111;
     padding: 15px 0;
@@ -38,7 +42,9 @@ nav ul li a:hover {
     text-shadow: 0 0 10px #00ffaa;
 }
 
-/* Section Styling */
+/* ===========================
+   HOME PAGE SECTIONS
+   =========================== */
 .section {
     padding: 80px 15%;
     text-align: center;
@@ -58,7 +64,9 @@ nav ul li a:hover {
     margin-bottom: 18px;
 }
 
-/* Spaceship Icon */
+/* ===========================
+   SPACESHIP ICON
+   =========================== */
 .spaceship {
     font-size: 80px;
     color: #00d9ff;
@@ -73,78 +81,43 @@ nav ul li a:hover {
     100% { transform: translateY(0px); }
 }
 
-/* DETAILS PAGE GRID */
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 50px;
-    gap: 40px;
-}
-
-.info-images img {
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #00d9ff;
-}
-
-.info-text p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #e0e0e0;
-}
-
-/* Fade-in Animation */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-/* DETAILS PAGE GRID */
-.info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 50px;
-    gap: 40px;
-}
-
-.info-images img {
-    width: 100%;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px #00d9ff;
-}
-
-.info-text p {
-    font-size: 18px;
-    margin-bottom: 20px;
-    color: #e0e0e0;
-}
-/* PLANET LIST */
+/* ===========================
+   PLANET LIST (DETAILS PAGE)
+   =========================== */
 .planet-list {
-    width: 80%;
+    width: 85%;
     margin: auto;
     padding: 40px 0;
 }
 
-/* Each planet item */
+/* Planet Card */
 .planet-item {
-    background: #111;
-    margin-bottom: 20px;
-    padding: 20px;
-    border-radius: 12px;
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(10px);
+    margin-bottom: 25px;
+    padding: 25px;
+    border-radius: 15px;
     transition: 0.4s ease;
     cursor: pointer;
     border: 2px solid #00d9ff;
-    box-shadow: 0 0 15px #00d9ff55;
+    box-shadow: 0 0 20px #00d9ff55;
     overflow: hidden;
     position: relative;
 }
 
 /* Glowing border animation */
 .planet-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px #00d9ff, 0 0 40px #00aaff;
+    transform: scale(1.06);
+    box-shadow: 0 0 30px #00d9ff, 0 0 50px #00aaff;
     border-color: #00ffaa;
+}
+
+/* Title styling */
+.planet-item h2 {
+    margin: 0;
+    font-size: 28px;
+    color: #00d9ff;
+    text-shadow: 0 0 10px #00d9ff;
 }
 
 /* Hidden content until hover */
@@ -152,24 +125,26 @@ nav ul li a:hover {
     max-height: 0;
     overflow: hidden;
     display: flex;
-    gap: 20px;
+    gap: 25px;
     align-items: center;
-    transition: max-height 0.6s ease;
+    transition: max-height 0.7s ease, padding-top 0.7s ease;
+    padding-top: 0;
 }
 
 /* Slide down reveal */
 .planet-item:hover .planet-content {
-    max-height: 300px;
+    max-height: 400px;
+    padding-top: 20px;
 }
 
 /* FIXED IMAGE SHAPE (perfect circle) */
 .planet-content img {
-    width: 140px;
-    height: 140px;
-    object-fit: cover; /* prevents stretching */
-    border-radius: 50%; /* perfect circle */
-    box-shadow: 0 0 20px #00d9ff;
-    transition: transform 1s ease;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0 0 25px #00d9ff;
+    transition: transform 1.2s ease;
 }
 
 /* 3D rotation on hover */
@@ -182,9 +157,12 @@ nav ul li a:hover {
     font-size: 18px;
     color: #e0e0e0;
     max-width: 600px;
+    line-height: 1.5;
 }
 
-/* Fade-in animation */
+/* ===========================
+   FADE-IN ANIMATION
+   =========================== */
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(10px); }
     to { opacity: 1; transform: translateY(0); }
