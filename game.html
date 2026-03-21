@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbiter – Game</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav>
+    <ul>
+        <li class="brand">
+            <a href="index.html">
+                <img src="logo.png" class="logo">
+                <span class="brand-text"></span>
+            </a>
+        </li>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a href="details.html">Information</a></li>
+        <li><a href="abs.html">About Us</a></li>
+    </ul>
+</nav>
+
+<section class="section" id="gameSection">
+    <h1>ORBITER – Asteroid Run</h1>
+    <p class="changeable">Use the arrow keys to move. Click inside the game to Pause / Play and Restart.</p>
+    <canvas id="gameCanvas" width="800" height="500"></canvas>
+</section>
+
+<script src="game.js"></script>
+<script>
+window.onload = () => {
+    document.getElementById("gameSection").scrollIntoView({ behavior: "smooth" });
+};
+</script>
+
+</body>
+</html>

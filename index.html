@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbiter – Home</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<script>
+function startOrbiter() {
+    document.body.classList.add('start');
+
+    setTimeout(() => {
+        document.getElementById('main-section')
+            .scrollIntoView({ behavior: 'smooth' });
+    }, 300);
+}
+</script>
+
+<body class = "home">
+
+<nav>
+    <ul>
+        <li class="brand">
+            <a href="index.html">
+                <img src="logo.png" class="logo">
+                <span class="brand-text"></span>
+            </a>
+        </li>
+
+        <li><a href="index.html">Home</a></li>
+        <li><a href="game.html">Game</a></li>
+        <li><a href="details.html">Information</a></li>
+        <li><a href="abs.html">About Us</a></li>
+    </ul>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero" id="hero">
+    <img src="button.png" class="enter-img"
+     onclick="startOrbiter()">
+</section>
+
+<!-- MAIN SECTION -->
+<section class="section" id="main-section">
+    <div class="spaceship">🚀</div>
+    <h1>ORBITER</h1>
+    <p class="changeable">Explore. Survive. Connect.</p>
+    <p class="changeable">A space arcade experience built by Advit and Shaurya.</p>
+    <p class="changeable">Dodge asteroids, collect coins, and travel deep into the cosmos.</p>
+    <p class="changeable">Generated for 2026 DevPost hackathon.</p>
+</section>
+
+</body>
+</html>
