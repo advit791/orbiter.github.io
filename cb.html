@@ -58,9 +58,9 @@
                 addMessage("AI", aiText);
 
             } catch (err) {
-                addMessage("AI", "⚠️ Connection error — backend not reachable.");
-                console.error(err);
-            }
+  console.error("Frontend error:", err);
+  addMessage("AI", "⚠️ Connection error — backend not reachable.");
+}
         }
 
         function addMessage(sender, text) {
