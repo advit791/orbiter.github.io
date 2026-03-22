@@ -8,9 +8,8 @@ app.use(express.json());
 // Read API key from environment variable
 const GROQ_API_KEY = process.env.GROQ_API_KEY;
 
-if (!GROQ_API_KEY) {
-    console.error("Missing GROQ_API_KEY environment variable");
-}
+// Render gives you a PORT — use it
+const PORT = process.env.PORT || 3000;
 
 app.post("/api/chat", async (req, res) => {
     const userMessage = req.body.message;
@@ -49,6 +48,6 @@ app.post("/api/chat", async (req, res) => {
     }
 });
 
-app.listen(3000, () => {
-    console.log("Orbiter AI server running on http://localhost:3000");
+app.listen(PORT, () => {
+    console.log(`Orbiter AI server running on port ${PORT}`);
 });
